@@ -1,0 +1,247 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "/assets/images/dogfood.svg",
+      "name": "Breed Dry Dog Food",
+      "price": "100",
+      "rating_counts": "35",
+      "rating": 3,
+      "stock_status": "In Stock",
+      "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
+      "category": null
+    },
+    {
+      "id": 2,
+      "image": "/assets/images/cameraa.svg",
+      "name": "CANON EOS DSLR Camera",
+      "price": "360",
+      "rating_counts": "95",
+      "category": "Cameras",
+      "rating": 4,
+      "stock_status":"In Stock",
+      "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+      
+    },
+    {
+      "id": 3,
+      "image": "/assets/images/ideapad.svg",
+      "name": "ASUS FHD Gaming Laptop",
+      "price": "700",
+      "rating_counts": "325",
+      "category": "Computers",
+      "rating": 4,
+      "stock_status":"Out Stock",
+      "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+    },
+    {
+      "id": 4,
+      "image": "/assets/images/facewash.svg",
+      "name": "Curology Product Set ",
+      "price": "500",
+      "rating_counts": "145",
+      "rating": 4,
+      "stock_status":"In Stock",
+      "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
+      "category": null
+    },
+    {
+      "id": 5,
+      "image": "/assets/images/car.svg",
+      "name": "Kids Electric Car ",
+      "price": "960",
+      "rating_counts": "65",
+      "rating": 5,
+      "new_label": "NEW",
+      "colors": ["#FB1314", "#DB4444"],
+      "stock_status":"Out Stock",
+      "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
+      "category": null
+    },
+    {
+      "id": 6,
+      "image": "/assets/images/boot.svg",
+      "name": "Jr. Zoom Soccer Cleats ",
+      "price": "1160",
+      "rating_counts": "35",
+      "rating": 5,
+      "colors": ["#EEFF61", "#DB4444"],
+      "stock_status":"In Stock",
+      "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
+      "category": null
+    },
+    {
+      "id": 7,
+      "image": "/assets/images/Joystick.svg",
+      "name": "GP11 Shooter USB Gamepad",
+      "price": "660",
+      "rating_counts": "55",
+      "rating": 4.5,
+      "category": "Gaming",
+      "new_label": "NEW",
+      "colors": ["#000000", "#DB4444"],
+      "stock_status":"Out Stock",
+      "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+    },
+    {
+      "id": 8,
+      "image": "/assets/images/jaket.svg",
+      "name": "Quilted Satin Jacket",
+      "price": "660",
+      "rating_counts": "55",
+      "rating": 4.5,
+      "colors": ["#184A48", "#DB4444"],
+      "stock_status":"In Stock",
+      "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
+      "category": null
+    },
+    {
+      "id": 9,
+      "image": "/assets/images/playstation.svg",
+      "name": "HAVIT HV-G92 Gamepad",
+      "old_price": "$160",
+      "rating_counts": "88",
+      "rating": 5,
+      "category": "Gaming",
+      "offer": "40%",
+      "offer_price": "120",
+      "stock_status":"In Stock",
+      "discription":"PlayStation 5 Controller Skin High quality vinyl with airchannel adhesive for easy bubble free install & mess freeremoval Pressure sensitive."
+    },
+    {
+      "id": 10,
+      "image": "/assets/images/keyboard.svg",
+      "name": "AK-900 Wired Keyboard",
+      "old_price": "$1160",
+      "rating_counts": "75",
+      "rating": 4,
+      "offer_price": "960",
+      "offer": "35%",
+      "category": "Gaming",
+      "stock_status":"Out Stock",
+      "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+    },
+    {
+      "id": 11,
+      "image": "/assets/images/desktop.svg",
+      "name": "IPS LCD Gaming Monitor",
+      "old_price": "$400",
+      "rating_counts": "99",
+      "rating": 5,
+      "category": "Computers",
+      "offer": "30%",
+      "offer_price": "370",
+      "stock_status":"In Stock",
+      "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+      
+    },
+    {
+      "id": 12,
+      "image": "/assets/images/graphics.svg",
+      "name": "RGB liquid CPU Cooler",
+      "old_price": "$660",
+      "rating_counts": "65",
+      "rating": 4.5,
+      "offer_price": "170",
+      "category": "Gaming",
+      "stock_status":"In Stock",
+      "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+    },
+    
+      {
+        "id": 13,
+        "image": "/assets/images/dogfood.svg",
+        "name": "Breed Dry Dog Food",
+        "price": "100",
+        "rating_counts": "35",
+        "rating": 3,
+        "stock_status": "In Stock",
+        "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
+        "category": null
+      },
+      {
+        "id": 14,
+        "image": "/assets/images/cameraa.svg",
+        "name": "CANON EOS DSLR Camera",
+        "price": "360",
+        "rating_counts": "95",
+        "category": "Cameras",
+        "rating": 4,
+        "stock_status":"In Stock",
+        "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+        
+      },
+      {
+        "id": 15,
+        "image": "/assets/images/ideapad.svg",
+        "name": "ASUS FHD Gaming Laptop",
+        "price": "700",
+        "rating_counts": "325",
+        "category": "Computers",
+        "rating": 4,
+        "stock_status":"Out Stock",
+        "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+      },
+      {
+        "id": 16,
+        "image": "/assets/images/facewash.svg",
+        "name": "Curology Product Set ",
+        "price": "500",
+        "rating_counts": "145",
+        "rating": 4,
+        "stock_status":"In Stock",
+        "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
+        "category": null
+      },
+      {
+        "id": 17,
+        "image": "/assets/images/car.svg",
+        "name": "Kids Electric Car ",
+        "price": "960",
+        "rating_counts": "65",
+        "rating": 5,
+        "new_label": "NEW",
+        "colors": ["#FB1314", "#DB4444"],
+        "stock_status":"Out Stock",
+        "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
+        "category": null
+      },
+      {
+        "id": 18,
+        "image": "/assets/images/boot.svg",
+        "name": "Jr. Zoom Soccer Cleats ",
+        "price": "1160",
+        "rating_counts": "35",
+        "rating": 5,
+        "colors": ["#EEFF61", "#DB4444"],
+        "stock_status":"In Stock",
+        "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
+        "category": null
+      },
+      {
+        "id": 19,
+        "image": "/assets/images/Joystick.svg",
+        "name": "GP11 Shooter USB Gamepad",
+        "price": "660",
+        "rating_counts": "55",
+        "rating": 4.5,
+        "category": "Gaming",
+        "new_label": "NEW",
+        "colors": ["#000000", "#DB4444"],
+        "stock_status":"Out Stock",
+        "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+      },
+      {
+        "id": 20,
+        "image": "/assets/images/jaket.svg",
+        "name": "Quilted Satin Jacket",
+        "price": "660",
+        "rating_counts": "55",
+        "rating": 4.5,
+        "colors": ["#184A48", "#DB4444"],
+        "stock_status":"In Stock",
+        "discription":"PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
+        "category": null
+      }
+  ]
+}

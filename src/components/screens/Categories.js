@@ -69,6 +69,12 @@ const Rectangle = styled.div`
   width: 20px;
   height: 40px;
   border-radius: 4px;
+  @media (max-width:  768px) {
+   height: 35px;
+   width:15px;}
+   @media (mix-width: 680px) {
+   height: 30px;
+   width:18px;}
 `;
 const Title = styled.h4`
   color: #db4444;
@@ -81,11 +87,31 @@ const Subtitle = styled.h1`
   font-size: 24px;
   font-weight: 600;
   margin-top: 10px;
+  @media (max-width: 768px) {
+  font-size:22px;}
+  @media (max-width: 540px) {
+  font-size:20px;}
 `;
 
 const CardsContainer = styled.div`
   display: flex;
   gap: 20px;
+  @media(max-width:1024px) {
+  gap:30px;
+  flex-wrap:wrap;}
+  @media(max-width:980px){
+  flex-wrap:wrap;
+  gap:32px;
+  }
+  @media (max-width:768px) {
+   gap: 27px;
+}
+   @media (max-width:680px) {
+   gap: 31px;
+}
+   @media (max-width:540px) {
+   gap: 35px;
+}
 `;
 
 const Card = styled.div`
@@ -100,6 +126,41 @@ const Card = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  @media(max-width:1536px) {
+  height:130px;}
+  @media (max-width:1280px) {
+   height:100px;
+   padding:20px;
+}
+   @media (max-width:1024px) {
+   height:120px;
+   padding:23px;
+   width:25%; }
+   @media (max-width:980px) {
+   height:100px;
+   padding:25px;
+   width:24%;
+}
+   @media (max-width:768px) {
+   width:22%;
+}
+   @media (max-width:680px) {
+   width:20%;
+}
+   @media (max-width:540px) {
+   width:34%;
+}
+   @media (max-width:480px) {
+   width:32%;
+}
+   @media (max-width:360px) {
+   width:26%;
+   height:80px;
+}
+   @media (max-width:320px) {
+   width:100%;
+   
+}
 `;
 
 const ImageIcon = styled.img`
@@ -112,6 +173,9 @@ const ImageText = styled.h6`
   font-size: 16px;
   font-weight: 400;
   margin: 0;
+  @media (max-width: 540px) {
+   font-size: 14px;
+}
 `;
 
 export default Categories;

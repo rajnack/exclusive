@@ -50,11 +50,10 @@ const Header = styled.header`
   display: flex;
   justify-content: center;
   height: 48px;
-
-  @media (max-width: 1024px) {
-    display: block;
-    height: 68px;
+  @media (max-width: 480px) {
+    display: none;
   }
+
 `;
 
 const Wrapper = styled.div`
@@ -65,24 +64,16 @@ const Wrapper = styled.div`
   align-items: center;
   position: relative;
 
-  @media (max-width: 1024px) {
-    display: grid;
-    width: 100%;
-    height: 100%;
-  }
+ 
 `;
 
 const PromoSection = styled.div`
-  position: absolute;
   display: flex;
+  align-items: center;
+  @media (max-width:680px) {
+  width: 100%;
 
-  @media (max-width: 1024px) {
-    display: inline-flex;
-    position: unset;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
+  
 `;
 
 const PromoText = styled.p`
@@ -90,6 +81,8 @@ const PromoText = styled.p`
   color: #fff;
   font-size: 14px;
   font-weight: 400;
+  @media(max-width:680px){
+  font-size:10px;}
 `;
 
 const ShopButton = styled(Link)`
@@ -97,25 +90,28 @@ const ShopButton = styled(Link)`
   margin-left: 12px;
   font-weight: 600;
   font-size: 14px;
+  @media(max-width:680px){
+  font-size:12px
+  }
 `;
 
 const LanguageSelector = styled.div`
-  position: absolute;
-  right: 0;
+  align-items: center;
   display: flex;
-
-  @media (max-width: 1024px) {
-    position: unset;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
+  margin-left: 12px;
+  position:absolute;
+  top:14px;
+  right: 4px;
 `;
 
 const LanguageText = styled.div`
   color: #fff;
   font-size: 14px;
   font-weight: 400;
+  @media (max-width:768px) {
+  display: none;}
+  @media (max-width:680px) {
+  display: none;}
 `;
 
 const ArrowContainer = styled.h4`

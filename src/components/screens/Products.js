@@ -22,15 +22,19 @@ function Products({ selectedCategory }) {
       })
       .then((data) => {
         console.log("Fetched products:", data.products);
-        setItems(data.products.slice(0, 8));
+        setItems(data.products);
       })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
- 
   const filteredItems = selectedCategory
-    ? items.filter((product) => product.category && product.category.toLowerCase() === selectedCategory.toLowerCase())
+    ? items.filter(
+        (product) =>
+          product.category &&
+          product.category.toLowerCase() === selectedCategory.toLowerCase()
+      )
     : items;
+    const displayedItems = selectedCategory ? filteredItems : filteredItems.slice(0, 8);
 
   const renderStars = (rating) => {
     const totalStars = 5;
@@ -58,7 +62,7 @@ function Products({ selectedCategory }) {
       <MainContainer>
         <CardWrapper>
           <ProductContainer>
-          {filteredItems.map((product) => (
+            {displayedItems.map((product) => (
               <ProductContent key={product.id}>
                 <TopContainer to={`/details/${product.id}`}>
                   <ProductImageWrapper>
@@ -82,27 +86,45 @@ function Products({ selectedCategory }) {
                 </TopContainer>
                 <ProductDetails>
                   <ProductName>{product.name}</ProductName>
-                  <PriceAndRatingContainer>
-                    <ProductPrice>$ {product.price}</ProductPrice>
-                    <DiscountedPrice>{product.offer_price}</DiscountedPrice>
-                  </PriceAndRatingContainer>
-                  <RatingContainer>
-                    <RatingContainer>
-                      {renderStars(product.rating)}
-                    </RatingContainer>
-                    <ProductRating>({product.rating_counts})</ProductRating>
-                  </RatingContainer>
-                  <ColorOption>
-                    <ColorButtonsContainer>
-                      {product.colors &&
-                        product.colors.length > 0 &&
-                        product.colors.map((color) => (
-                          <CustomPadding key={color}>
-                            <ColorButton color={color} />
-                          </CustomPadding>
-                        ))}
-                    </ColorButtonsContainer>
-                  </ColorOption>
+                  {(!product.colors || product.colors.length === 0) &&
+                  !product.offer_price &&
+                  !product.old_price ? (
+                    <CombinedPriceRatingContainer>
+                      <ProductPrice>$ {product.price}</ProductPrice>
+                      <RatingContainer>
+                        {renderStars(product.rating)}
+                        <ProductRating>({product.rating_counts})</ProductRating>
+                      </RatingContainer>
+                    </CombinedPriceRatingContainer>
+                  ) : (
+                    <>
+                      <PriceAndRatingContainer>
+                        <ProductPrice>$ {product.price}</ProductPrice>
+                        {product.offer_price && (
+                          <DiscountedPrice>
+                            {product.offer_price}
+                          </DiscountedPrice>
+                        )}
+                        <RatingContainer>
+                          {renderStars(product.rating)}
+                          <ProductRating>
+                            ({product.rating_counts})
+                          </ProductRating>
+                        </RatingContainer>
+                      </PriceAndRatingContainer>
+                      <ColorOption>
+                        <ColorButtonsContainer>
+                          {product.colors &&
+                            product.colors.length > 0 &&
+                            product.colors.map((color) => (
+                              <CustomPadding key={color}>
+                                <ColorButton color={color} />
+                              </CustomPadding>
+                            ))}
+                        </ColorButtonsContainer>
+                      </ColorOption>
+                    </>
+                  )}
                 </ProductDetails>
               </ProductContent>
             ))}
@@ -164,7 +186,19 @@ const CardWrapper = styled.div`
 `;
 const ProductContent = styled.div`
   position: relative;
-  width: 23%;
+  width: 22%;
+  @media (max-width:1536px) {
+  width: 22%;}
+  @media(max-width:1024px) {
+  width: 30%;}
+  @media(max-width:980px) {
+  width: 29%;}
+  @media(max-width:768px) {
+  width: 45%;}
+  @media(max-width:680px) {
+  width: 44%;}
+  @media(max-width:540px) {
+  width: 100%;}
 `;
 
 const TopContainer = styled(Link)`
@@ -198,15 +232,14 @@ const AddtoCartButton = styled.button`
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
-  opacity: 0; // Initially hidden
+  opacity: 0; 
   transition: opacity 0.3s ease-in-out;
   width: 100%;
   height: 41px;
 
-  // Show button on hover/focus of the parent
   ${TopContainer}:hover &,
   ${TopContainer}:focus-within & {
-    opacity: 1; // Show the button on hover/focus
+    opacity: 1; 
   }
 `;
 
@@ -215,7 +248,23 @@ const ProductContainer = styled.div`
   padding-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 49px;
+  @media (max-width:1536px) {
+  gap:49px;}
+  @media(max-width:1280px) {
+  gap:40px;
+}
+  @media(max-width:1024px) {
+  gap:40px;
+  @media(max-width:980px) {
+  gap:50px;
+}
+  @media(max-width:768px) {
+  gap:60px;
+}
+  @media(max-width:680px) {
+  gap:65px;
+}
 `;
 
 const TopRightContainer = styled.div`
@@ -244,6 +293,12 @@ const LikeIconWrapper = styled.button`
     width: 20px;
     height: 20px;
   }
+    @media(max-width:1280px){
+    top:-2px;
+    right:1px;
+    width:30px;
+    height:30px;
+    }
 `;
 
 const LikeIcon = styled.img`
@@ -272,6 +327,12 @@ const ViewIconWrapper = styled.button`
     width: 20px;
     height: 20px;
   }
+    @media(max-width:1280px){
+    top:38px;
+    right:1px;
+    width:30px;
+    height:30px;
+    }
 `;
 
 const ViewIcon = styled.img`
@@ -292,6 +353,19 @@ const ViewAllButton = styled(Link)`
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
+  @media(max-width:1024px) {
+  padding: 15px 35px;}
+  @media(max-width:980px){
+  padding: 15px 40px;}
+  @media(max-width:768px){
+  padding: 12px 32px;}
+  @media(max-width:680px){
+  padding: 10px 25px;}
+  @media(max-width:480px){
+  padding: 12px 20px;}
+  @media(max-width:360px){
+  padding: 10px 15px;
+  font-size:14px;}
 `;
 
 const ProductImageWrapper = styled.div``;
@@ -308,11 +382,23 @@ const ProductName = styled.h3`
   font-size: 16px;
   font-weight: 500;
 `;
+const CombinedPriceRatingContainer = styled.div`
+  display: flex; 
+  align-items: center; 
+  margin-top: 10px; 
+  gap: 10px; 
+  font-size: 16px; 
+  color: #333;
+`;
 
 const PriceAndRatingContainer = styled.div`
   display: flex;
-  gap: 12px;
+  align-items: center; 
+  gap: 10px; 
+  font-size: 16px; 
+  color: #333; 
 `;
+
 
 const ProductPrice = styled.span`
   color: #db4444;
@@ -351,12 +437,19 @@ const CustomPadding = styled.span`
     border: 1px solid #3f4646;
     outline: none;
   }
+    @media(max-width:1280px) {
+    width: 26px;
+    height: 26px;}
+    @media (max-width: 1024px) {
+    width: 25px;
+    height: 25px;}
+
 `;
 
 const ColorButton = styled.button`
   border: none;
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   cursor: pointer;
   background-color: ${(props) => props.color};
@@ -403,11 +496,32 @@ const Customer = styled.section`
   padding: 66px;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 1024px) {
+  flex-wrap:wrap;
+  justify-content:center;
+  gap: 50px;}
+  @media(max-width:980px) {
+  flex-wrap:wrap;
+  gap:40px;
+  justify-content:center;
+}
+  @media(max-width:768px) {
+  padding:46px;
+  gap:30px;
+}
+  @media(max-width:360px) {
+  padding:20px;
+  gap:25px;
+}
+  @media(max-width:320px) {
+  padding:20px 0;;
+  
+}
 `;
 
 const Box = styled.div`
   text-align: center;
-  padding: 20px;
+
 `;
 
 const IconWrapper = styled.span`
@@ -420,14 +534,18 @@ const IconWrapper = styled.span`
 `;
 
 const Text = styled.h3`
-  font-size: 1.2rem;
+  font-size: 20px;
   margin: 5px 0;
-  color: #333;
+  font-weight: 600;
+  color: #000;
+  @media(max-width:480px) {
+  font-size:18px; }
 `;
 
 const Paragraph = styled.p`
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 14px;
+  font-weight:400;
+  color: #000;
 `;
 
 const IconDisplay = styled.div`
@@ -444,6 +562,8 @@ const FaRegCheckCircle = styled.img``;
 const SectionBottom = styled.div`
   display: flex;
   justify-content: center;
+  @media(max-width:360px) {
+  padding-top:30px;}
 `;
 
 const WrapperBottom = styled.div`

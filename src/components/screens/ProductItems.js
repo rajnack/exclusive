@@ -143,6 +143,8 @@ const ProdectsText = styled.h2`
     color: #000;
     font-weight: bold;
   }
+    @media (max-width:768px) {
+    font-size:14px;}
 `;
 
 const HomeText = styled(Link)`
@@ -151,6 +153,8 @@ const HomeText = styled(Link)`
   font-size: 14px;
   text-decoration: none;
   cursor: pointer;
+  @media (max-width:768px) {
+    font-size:13px;}
 `;
 const MainContainer = styled.div`
   padding-top: 40px;
@@ -159,6 +163,18 @@ const MainContainer = styled.div`
 const ProductContent = styled.div`
   position: relative;
   width: 23%;
+  @media (max-width:1536px) {
+  width: 22%;}
+  @media(max-width:1024px) {
+  width: 30%;}
+  @media(max-width:980px) {
+  width: 29%;}
+  @media(max-width:768px) {
+  width: 45%;}
+  @media(max-width:680px) {
+  width: 44%;}
+  @media(max-width:540px) {
+  width: 100%;}
 `;
 const Star = styled.img`
   width: 16px;
@@ -188,15 +204,14 @@ const AddtoCartButton = styled.button`
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
-  opacity: 0; // Initially hidden
+  opacity: 0; 
   transition: opacity 0.3s ease-in-out;
   width: 100%;
   height: 41px;
 
-  // Show button on hover/focus of the parent
   ${TopContainer}:hover &,
   ${TopContainer}:focus-within & {
-    opacity: 1; // Show the button on hover/focus
+    opacity: 1; 
   }
 `;
 
@@ -205,6 +220,23 @@ const ProductContainer = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
+   @media (max-width:1536px) {
+  gap:49px;}
+  @media(max-width:1280px) {
+  justify-content: start;
+  gap:40px;
+}
+  @media(max-width:1024px) {
+  gap:40px;
+  @media(max-width:980px) {
+  gap:50px;
+}
+  @media(max-width:768px) {
+  gap:60px;
+}
+  @media(max-width:680px) {
+  gap:65px;
+}
 `;
 
 const TopRightContainer = styled.div`
@@ -232,6 +264,12 @@ const LikeIconWrapper = styled.button`
     width: 20px;
     height: 20px;
   }
+    @media(max-width:1280px){
+    top:-2px;
+    right:1px;
+    width:30px;
+    height:30px;
+    }
 `;
 const LikeIcon = styled.img`
   border: 1px solid #fff;
@@ -259,6 +297,12 @@ const ViewIconWrapper = styled.button`
     width: 20px;
     height: 20px;
   }
+     @media(max-width:1280px){
+    top:38px;
+    right:1px;
+    width:30px;
+    height:30px;
+    }
 `;
 
 const ViewIcon = styled.img`
@@ -306,18 +350,6 @@ const ProductRating = styled.p`
   font-weight: 600;
 `;
 
-//   border-radius: 50%;
-//   width: 20px;
-//   height: 20px;
-//   margin-right: 8px;
-//   border: none;
-//   cursor: pointer;
-//   &:hover,
-//   &:focus {
-//     border: 2px solid #000000;
-//     outline: none;
-//   }
-// `;
 
 const ColorOption = styled.div``;
 
@@ -338,6 +370,12 @@ const CustomPadding = styled.span`
     border: 1px solid #3f4646;
     outline: none;
   }
+     @media(max-width:1280px) {
+    width: 26px;
+    height: 26px;}
+    @media (max-width: 1024px) {
+    width: 25px;
+    height: 25px;}
 `;
 
 const ColorButton = styled.button`
@@ -347,6 +385,16 @@ const ColorButton = styled.button`
   border-radius: 50%;
   cursor: pointer;
   background-color: ${(props) => props.color};
+  @media (max-width: 1024px) {
+  width: 20px;
+  height: 20px;}
+  @media (max-width: 768px) {
+  width: 18px;
+  height: 18px;}
+  @media (max-width: 680px) {
+  width: 16px;
+  height: 16px;}
+
 `;
 const NewLabel = styled.span`
   position: absolute;

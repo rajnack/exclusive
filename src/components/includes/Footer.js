@@ -1,256 +1,367 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-function Footer() {
+const Footer = () => {
   return (
     <>
-      <FooterSection>
+      <FooterMainContainer>
         <Wrapper>
-          <TopContainer>
-            <FooterTop>
-              {/* Section for Exclusive */}
-              <FooterColumn>
-                <FooterHeading>Exclusive</FooterHeading>
-                <FooterText to="">Subscribe</FooterText>
-                <FooterItem to="">Get 10% off your first order</FooterItem>
-                <FooterItem to="">
-                  <EnterBar>
-                    <EnterInput type="email" placeholder="Enter your email" />
-                    <EnterButton>
-                      <SendIcon
-                        src={require("../../assets/images/send.svg").default}
-                        alt="send-icon"
-                      />
-                    </EnterButton>
-                  </EnterBar>
-                </FooterItem>
-              </FooterColumn>
+          <TopSection>
+            <SubscribeSection>
+              <Content>
+                <SectionTitleMain>Exclusive</SectionTitleMain>
+                <SectionSubtitle>Subscribe</SectionSubtitle>
+                <OfferText>Get 10% off your first order</OfferText>
+                <Form>
+                  <InputField placeholder="Enter your email" />
+                  <SendButton>
+                    <SendIcon
+                      src={
+                        require("../../assets/images/send.svg").default
+                      }
+                      alt="send-icon"
+                    />
+                  </SendButton>
+                </Form>
+              </Content>
+            </SubscribeSection>
 
-              {/* Section for Support */}
-              <FooterColumn>
-                <FooterHeading>Support</FooterHeading>
-                <FooterItem to="">
-                  111 Bijoy Sarani, Dhaka, Bangladesh.
-                </FooterItem>
-                <FooterItem to="">exclusive@gmail.com</FooterItem>
-                <FooterItem to="">+88015-88888-9999</FooterItem>
-              </FooterColumn>
+            <SupportSection>
+              <Content>
+                <SectionTitle>Support</SectionTitle>
+                <ContactDetails>
+                  <ContactItem>
+                    111 Bijoy sarani, Dhaka, <br /> DH 1515, Bangladesh.
+                  </ContactItem>
+                  <ContactItem>exclusive@gmail.com</ContactItem>
+                  <ContactItem>+88015-88888-9999</ContactItem>
+                </ContactDetails>
+              </Content>
+            </SupportSection>
 
-              {/* Section for Account */}
-              <FooterColumn>
-                <FooterHeading>Account</FooterHeading>
-                <FooterItem to="">My Account</FooterItem>
-                <FooterItem to="">Login / Register</FooterItem>
-                <FooterItem to="">Cart</FooterItem>
-                <FooterItem to="">Wishlist</FooterItem>
-                <FooterItem to="">Shop</FooterItem>
-              </FooterColumn>
+            <AccountSection>
+              <Content>
+                <SectionTitle>Account</SectionTitle>
+                <LinksList>
+                  <LinkItem>My Account</LinkItem>
+                  <LinkItem>Login / Register</LinkItem>
+                  <LinkItem>Cart</LinkItem>
+                  <LinkItem>Wishlist</LinkItem>
+                  <LinkItem>Shop</LinkItem>
+                </LinksList>
+              </Content>
+            </AccountSection>
 
-              {/* Section for Quick Links */}
-              <FooterColumn>
-                <FooterHeading>Quick Links</FooterHeading>
-                <FooterItem to="">Privacy Policy</FooterItem>
-                <FooterItem to="">Terms Of Use</FooterItem>
-                <FooterItem to="">FAQ</FooterItem>
-                <FooterItem to="">Contact</FooterItem>
-              </FooterColumn>
+            <QuickLinksSection>
+              <Content>
+                <SectionTitle>Quick Links</SectionTitle>
+                <LinksList>
+                  <LinkItem>Privacy Policy</LinkItem>
+                  <LinkItem>Terms Of Use</LinkItem>
+                  <LinkItem>FAQ</LinkItem>
+                  <LinkItem>Contact</LinkItem>
+                </LinksList>
+              </Content>
+            </QuickLinksSection>
 
-              {/* Section for App Download */}
-              <FooterColumn>
-                <FooterHeading>Download App</FooterHeading>
-                <FooterParagraph to="">
-                  Save $3 with App New User Only
-                </FooterParagraph>
-                <Icons>
-                  <ScannerCode
-                    src={require("../../assets/images/Qrcode 1.svg").default}
-                    alt="qr-icon"
-                  />
-                  <Media>
-                    <Atag
-                      href="https://play.google.com/store"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <AppIcon
+            <DownloadSection>
+              <Content>
+                <SectionTitle>Download App</SectionTitle>
+                <PromotionText>Save $3 with App New User Only</PromotionText>
+                <DownloadOptions>
+                  <QRCode>
+                    <QRCodeImage
+                      src={
+                        require("../../assets/images/Qrcode 1.svg").default
+                      }
+                      alt=""
+                    />
+                  </QRCode>
+                  <AppInstallers>
+                    <GooglePlayButton>
+                      <GooglePlayImage
                         src={
-                          require("../../assets/images/GooglePlay.svg").default
+                          require("../../assets/images/GooglePlay.svg")
+                            .default
                         }
-                        alt="google-play-icon"
+                        alt=""
                       />
-                    </Atag>
-
-                    {/* Link for App Store */}
-                    <Atag
-                      href="https://www.apple.com/app-store/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <AppIcon
+                    </GooglePlayButton>
+                    <AppStoreButton>
+                      <AppStoreImage
                         src={
-                          require("../../assets/images/AppStore.svg").default
+                          require("../../assets/images/AppStore.svg")
+                            .default
                         }
-                        alt="app-store-icon"
+                        alt=""
                       />
-                    </Atag>
-                  </Media>
-                </Icons>
-              </FooterColumn>
-            </FooterTop>
-          </TopContainer>
-        </Wrapper>
-        <FooterBottom>
-          <CopyrightIcon
-            src={require("../../assets/images/icon-copyright.svg").default}
-            alt="copyright"
-          />
-          <Copyright>Copyright Rimel 2022. All rights reserved</Copyright>
-        </FooterBottom>
-      </FooterSection>
+                    </AppStoreButton>
+                  </AppInstallers>
+                </DownloadOptions>
+                <SocialLinks>
+                  <FacebookLink to={"#"}>
+                    <FacebookIcon
+                      src={
+                        require("../../assets/images/facebook.svg")
+                          .default
+                      }
+                      alt="facebook-icon"
+                    />
+                  </FacebookLink>
+                  <TwitterLink to={"#"}>
+                    <TwitterIcon
+                      src={
+                        require("../../assets/images/twitter.svg").default
+                      }
+                      alt="twitter-icon"
+                    />
+                  </TwitterLink>
+                  <InstagramLink to={"#"}>
+                    <InstagramIcon
+                      src={
+                        require("../../assets/images/icon-instagram.svg")
+                          .default
+                      }
+                      alt="instagram-icon"
+                    />
+                  </InstagramLink>
+                  <LinkedInLink to={"#"}>
+                    <LinkedInIcon
+                      src={
+                        require("../../assets/images/Icon-Linkedin.svg")
+                          .default
+                      }
+                      alt="linkedin-icon"
+                    />
+                  </LinkedInLink>
+                </SocialLinks>
+              </Content>
+            </DownloadSection>
+          </TopSection>
+          </Wrapper>
+          <BottomSection>
+            <FooterTextContainer>
+              <CopyrightWrapper>
+                <CopyrightIcon
+                  src={
+                    require("../../assets/images/icon-copyright.svg")
+                      .default
+                  }
+                  alt="copyright-icon"
+                />
+              </CopyrightWrapper>
+              <FooterText>Copyright Rimel 2022. All right reserved</FooterText>
+            </FooterTextContainer>
+          </BottomSection>
+      </FooterMainContainer>
     </>
   );
-}
+};
 
-const FooterSection = styled.footer`
-  background: #000;
-  padding-top: 50px;
-  color: #fafafa;
+const FooterMainContainer = styled.footer`
+  width: 100%;
+  background-color: #000;
+  
+  margin-top: 60px;
 `;
-const Atag = styled.a`
-  cursor: pointer;
-  margin: 5px 0;
-`;
-
-const TopContainer = styled.div`
-  // display: flex;
-  // justify-content: center;
-`;
-
 const Wrapper = styled.div`
   max-width: 1790px;
   width: 80%;
   margin: 0 auto;
 `;
-
-const FooterTop = styled.div`
+const TopSection = styled.div`
   display: flex;
   justify-content: space-between;
-  // flex-wrap: wrap;
-  gap: 50px;
-  padding-bottom: 40px;
+  padding: 80px 0 40px 0;
+  @media(max-width:1024px) {
+  flex-wrap: wrap;
+  gap:56px;
+  justify-content: center;}
+  @media(max-width:980px) {
+  flex-wrap: wrap;
+  gap: 59px;
+  justify-content: center;}
+  @media(max-width:768px) {
+  flex-wrap: wrap;
+  gap: 58px;
+  justify-content: center;}
+  @media(max-width:680px) {
+  flex-wrap: wrap;
+  gap: 57px;
+  justify-content:space-between;}
+  @media(max-width:320px) {
+  flex-wrap: wrap;
+  gap: 33px;
+  justify-content: space-between;}
 `;
-
-const FooterColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-`;
-
-const FooterHeading = styled.h4`
+const SubscribeSection = styled.div``;
+const Content = styled.div``;
+const SectionTitleMain = styled.h2`
+  margin: 0;
+  color: #fff;
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 15px;
+  @media(max-width:480px) {
+  font-size: 20px;}
 `;
-
-const FooterText = styled(Link)`
+const SectionSubtitle = styled.h3`
+  margin: 0;
   font-size: 20px;
   font-weight: 500;
-  text-decoration: none;
   color: #fff;
+  padding: 24px 0px;
+  @media(max-width:480px) {
+  font-size: 18px;}
 `;
-
-const FooterItem = styled(Link)`
-  margin-bottom: 10px;
+const SectionTitle = styled.h2`
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 24px;
+  @media(max-width:480px) {
+  font-size: 18px;}
+`;
+const OfferText = styled.p`
+  margin: 0;
   font-size: 16px;
   font-weight: 400;
-  text-decoration: none;
-  line-height: 24px;
   color: #fff;
-  width: 100%;
 `;
-
-const EnterBar = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  position: relative;
-`;
-
-const EnterInput = styled.input`
-  width: 200px;
-  padding: 10px;
-  border: 1px solid #ddd;
+const Form = styled.form`
+  padding: 7px 10px;
   border-radius: 4px;
+  border: 1.5px solid #fff;
+  margin: 16px 0;
+`;
+const InputField = styled.input`
   background: #000;
   color: #fafafa;
-`;
-
-const EnterButton = styled.button`
-  background: #000;
   border: none;
-  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  width:150px;
+`;
+const SendButton = styled.button`
+  border: none;
+  background: #000;
   cursor: pointer;
-  position: absolute;
-  right: 3%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 18%;
-  height: auto;
+`;
+const SendIcon = styled.img``;
+
+const SupportSection = styled.div``;
+const ContactDetails = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`;
+const ContactItem = styled.li`
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+
+  &:nth-child(2) {
+    padding: 18px 0;
+  }
 `;
 
-const SendIcon = styled.img`
+const AccountSection = styled.div``;
+const LinksList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`;
+const LinkItem = styled.li`
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+
+  &:nth-child(2) {
+    padding: 18px 0;
+  }
+
+  &:nth-child(4) {
+    padding: 18px 0;
+  }
+`;
+
+const QuickLinksSection = styled.div``;
+
+const DownloadSection = styled.div``;
+const PromotionText = styled.p`
+  color: #a9a9a9;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+`;
+const DownloadOptions = styled.div`
+  display: flex;
+  gap: 13px;
+  padding: 10px 0;
+`;
+const QRCode = styled.div`
+  cursor: pointer;
+`;
+const QRCodeImage = styled.img``;
+const AppInstallers = styled.div``;
+const GooglePlayButton = styled.div`
+  cursor: pointer;
+`;
+const GooglePlayImage = styled.img``;
+const AppStoreButton = styled.div`
+  cursor: pointer;
+`;
+const AppStoreImage = styled.img``;
+
+const SocialLinks = styled.div`
+  display: flex;
+  gap: 24px;
+  margin-top: 5px;
+  align-items: center;
+`;
+const FacebookLink = styled(Link)``;
+const TwitterLink = styled(Link)``;
+const InstagramLink = styled(Link)``;
+const LinkedInLink = styled(Link)``;
+
+const FacebookIcon = styled.img``;
+const TwitterIcon = styled.img``;
+const InstagramIcon = styled.img``;
+const LinkedInIcon = styled.img``;
+
+const BottomSection = styled.div``;
+const FooterTextContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  padding: 40px 0 20px 0;
+   border-top: 1px solid #ffffff;
+    opacity: 0.2;
+    @media (max-width: 1024px) {
+    padding:30px 0 20px 0;}
+    @media(max-width:680px){
+    padding:20px 0px 20px 0;
+    }
+`;
+const CopyrightWrapper = styled.div`
   width: 20px;
   height: 20px;
 `;
-
-const FooterParagraph = styled(Link)`
-  font-size: 12px;
-  font-weight: 500;
-  color: #fff;
-  text-decoration: none;
-`;
-
-const Icons = styled.div`
-  display: flex;
-  gap: 10px;
-  align-items: center;
-`;
-
-const ScannerCode = styled.img`
-  width: 80px;
-  height: 80px;
-`;
-
-const Media = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const AppIcon = styled.img`
-  width: 100%;
-  display: block;
-`;
-
-const FooterBottom = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  border-top: 1px solid #ffffff;
-  text-align: center;
-  opacity: 0.2;
-`;
-
 const CopyrightIcon = styled.img`
   width: 20px;
   margin-right: 5px;
 `;
-
-const Copyright = styled.p`
-  font-size: 14px;
+const FooterText = styled.p`
+  color: #ffffff;
   margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  @media (max-width: 360px) {
+font-size:14px;}
 `;
 
-export default Footer;
+export default Footer;

@@ -194,6 +194,70 @@ const Card = styled.div`
   align-items: center;
   gap: 70px;
   padding: 20px 0;
+  @media (max-width: 1024px) {
+   flex-direction: column;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    padding: 20px 0;
+    gap: 20px;
+}
+    @media (max-width: 980px) {
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    padding: 20px 0;
+    gap: 10px;
+}
+    @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    padding: 20px 0;
+    gap: 10px;
+}
+    @media (max-width:680px) {
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    padding: 20px 0;
+    gap: 10px;
+}
+    @media (max-width: 540px) {
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    padding: 20px 0;
+    gap: 10px;
+}
+    @media (max-width: 480px) {
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    padding: 20px 0;
+    gap: 10px;
+}
+    @media (max-width: 360px) {
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    padding: 20px 0;
+    gap: 10px;
+}
+    @media (max-width: 320px) {
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    padding: 20px 0;
+    gap: 10px;
+}
 `;
 
 const LeftContainer = styled.div`
